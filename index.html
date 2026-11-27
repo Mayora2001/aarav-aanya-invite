@@ -12,7 +12,6 @@
     --peacock: #14284B;
     --gold: #C59B27;
     --rose: #9E4756;
-    --blush: #E8D5D8;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -32,8 +31,6 @@
     overflow-x: hidden;
     box-shadow: 0 0 40px rgba(0,0,0,0.6);
   }
-
-  /* PHASE 1: PRELOADER */
   #preloader {
     position: fixed;
     inset: 0;
@@ -94,8 +91,6 @@
     font-size: 17px;
     color: #6D5B52;
   }
-
-  /* PHASE 2: ENVELOPE COVER */
   #envelope-screen {
     position: fixed;
     inset: 0;
@@ -184,8 +179,6 @@
     cursor: pointer;
     white-space: nowrap;
   }
-
-  /* MUSIC TOGGLE */
   .music-btn {
     position: fixed;
     top: 16px;
@@ -203,14 +196,12 @@
     align-items: center;
     justify-content: center;
   }
-
-  /* HERO PAINTING SECTION */
   .hero {
     position: relative;
     width: 100%;
     height: 100vh;
     min-height: 680px;
-    background-image: url('vrindavan.png');
+    background-image: url('IMG-20261127-WA0004.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -265,8 +256,6 @@
     animation: bounce 2s infinite;
   }
   @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
-
-  /* PETALS */
   .petal {
     position: fixed;
     top: -20px;
@@ -283,8 +272,6 @@
     0% { transform: translateY(-20px) rotate(0deg) translateX(0); }
     100% { transform: translateY(105vh) rotate(360deg) translateX(45px); }
   }
-
-  /* CONTENT SECTIONS */
   .section {
     padding: 44px 22px;
     text-align: center;
@@ -318,8 +305,6 @@
     border-radius: 12px;
     font-size: 17px;
   }
-
-  /* COUNTDOWN */
   .countdown-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -335,8 +320,6 @@
   }
   .cd-num { font-size: 24px; font-weight: 700; display: block; }
   .cd-lbl { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; }
-
-  /* EVENT CARDS */
   .event-card {
     background: #FFFDF8;
     border: 1.5px solid var(--gold);
@@ -382,8 +365,6 @@
     letter-spacing: 1.5px;
     border: 1px solid var(--gold);
   }
-
-  /* RSVP */
   .rsvp-form input, .rsvp-form select, .rsvp-form textarea {
     width: 100%;
     padding: 11px 14px;
@@ -427,11 +408,9 @@
 <body>
 
 <div class="app-shell">
-  <!-- AUDIO -->
   <audio id="bg-music" src="music.mp3" loop></audio>
   <button class="music-btn" id="music-toggle" title="Toggle Music">🔊</button>
 
-  <!-- PHASE 1: PRELOADER -->
   <div id="preloader">
     <div class="micro-tag">A BEAUTIFUL BEGINNING</div>
     <div class="loader-title">Your invitation</div>
@@ -442,14 +421,12 @@
     <div class="loader-caption" id="loader-text">A celebration made for you...</div>
   </div>
 
-  <!-- PHASE 2: ENVELOPE -->
   <div id="envelope-screen">
     <div class="env-border"></div>
     <div class="env-body"></div>
     <div class="env-flap-top"></div>
     <div class="silk-ribbon"></div>
 
-    <!-- Golden Flute & Mor Pankh Brooch -->
     <button class="brooch-btn" onclick="openInvitation()" aria-label="Open Invitation">
       <svg width="104" height="104" viewBox="0 0 120 120">
         <defs>
@@ -461,11 +438,9 @@
         </defs>
         <circle cx="60" cy="60" r="46" fill="url(#goldGrad)" stroke="#FFF8DC" stroke-width="2.5"/>
         <circle cx="60" cy="60" r="39" fill="#14284B" stroke="#D4AF37" stroke-width="1.5"/>
-        <!-- Peacock Feather -->
         <ellipse cx="60" cy="48" rx="14" ry="20" fill="#1B7F79"/>
         <ellipse cx="60" cy="49" rx="9" ry="13" fill="#2A4B8C"/>
         <circle cx="60" cy="50" r="5" fill="#F2C94C"/>
-        <!-- Golden Flute -->
         <rect x="24" y="68" width="72" height="5" rx="2.5" transform="rotate(-18 60 70)" fill="url(#goldGrad)"/>
         <text x="60" y="90" text-anchor="middle" fill="#F9E7B2" font-size="11" font-family="Cinzel Decorative">A &amp; A</text>
       </svg>
@@ -474,7 +449,6 @@
     <button class="open-pill" onclick="openInvitation()">OPEN THE INVITATION</button>
   </div>
 
-  <!-- PHASE 4: VRINDAVAN HERO -->
   <section class="hero">
     <div class="hero-top">
       <div class="shloka">॥ श्री गणेशाय नमः ॥ राधा-कृष्णाय नमः ॥</div>
@@ -487,7 +461,6 @@
     </div>
   </section>
 
-  <!-- BLESSINGS & FAMILY -->
   <section class="section">
     <div class="sec-tag">With Divine Blessings</div>
     <h2 class="sec-title">The Royal Union</h2>
@@ -503,7 +476,6 @@
     </div>
   </section>
 
-  <!-- COUNTDOWN -->
   <section class="section">
     <div class="sec-tag">Counting Every Moment</div>
     <h2 class="sec-title">Until We Say Forever</h2>
@@ -515,7 +487,6 @@
     </div>
   </section>
 
-  <!-- EVENTS ITINERARY -->
   <section class="section">
     <div class="sec-tag">Celebrations &amp; Muhurat</div>
     <h2 class="sec-title">Wedding Itinerary</h2>
@@ -545,7 +516,6 @@
     </div>
   </section>
 
-  <!-- RSVP & WISHES -->
   <section class="section">
     <div class="sec-tag">Be A Part Of Our Joy</div>
     <h2 class="sec-title">RSVP &amp; Blessings</h2>
@@ -571,7 +541,6 @@
 </div>
 
 <script>
-  // Preloader sequence
   setTimeout(() => {
     document.getElementById('loader-text').innerText = "Opening your invitation...";
   }, 1700);
@@ -579,7 +548,6 @@
     document.getElementById('preloader').classList.add('hidden');
   }, 3300);
 
-  // Music & Envelope Open
   const music = document.getElementById('bg-music');
   const toggleBtn = document.getElementById('music-toggle');
   let isPlaying = false;
@@ -595,7 +563,6 @@
     else { music.play(); toggleBtn.innerText = '🔊'; isPlaying = true; }
   });
 
-  // Falling Rose/Lotus Petals
   function startPetals() {
     for (let i = 0; i < 16; i++) {
       const p = document.createElement('div');
@@ -607,7 +574,6 @@
     }
   }
 
-  // Countdown Timer (Set to Dec 14, 2026)
   const targetDate = new Date("December 14, 2026 19:00:00").getTime();
   setInterval(() => {
     const now = new Date().getTime();
@@ -618,7 +584,6 @@
     document.getElementById('secs').innerText = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
   }, 1000);
 
-  // Dynamic Blessings Wall
   function addWish(e) {
     e.preventDefault();
     const name = document.getElementById('guest-name').value;
